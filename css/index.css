@@ -1,0 +1,15 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+:root{
+    --color: red;
+    --font-mada: 'Mada', sans-serif;
+}
+body{
+    overflow-x: hidden;
+    font-family: var(--font-mada);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing:antialiased;
+}
