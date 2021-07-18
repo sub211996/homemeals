@@ -1,74 +1,178 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-:root{
-    --color-primary: #FF5733;
-    --color-bg:#EEEEEE;
-    --font-mada: 'Mada', sans-serif;
+:root {
+  --color-primary: #ff5733;
+  --color-bg: #eeeeee;
+  --font-mada: "Mada", sans-serif;
 }
-body{
-    overflow-x: hidden;
-    font-family: var(--font-mada);
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing:antialiased;
+body {
+  overflow-x: hidden;
+  font-family: var(--font-mada);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
-.header__top__section{
-    padding:10px 0;
+.header__top__section {
+  padding: 10px 0;
 }
-.header__top{
-    display: flex;
-    justify-content: space-between;
+.header__top {
+  display: flex;
+  justify-content: space-between;
 }
-.header__top svg{
-    height:20px;
+.header__top svg {
+  height: 20px;
 }
-.banner__section{
-    height:80vh;
-    overflow: hidden;
+nav.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 99999;
 }
-.banner__section .item{
-    position:relative;
-    height:100%;
-    background-image:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(../images/PTHIHN5WMZEFDFLF5YRQCOQVMY.jpg);
-    background-size: cover;
-    background-position: 50%, 50%;
-    height: 80vh;
+.navbar-dark .navbar-nav .nav-link {
+  color: #ff5959;
+  font-weight: 600;
 }
-.banner__section .item .main__img{
-    height:100%;    
+.navbar-dark .navbar-nav .nav-link.order__link {
+  color: #fff;
+  background-color: #f5ad28;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 900;
 }
-.banner__section .item .text{
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%, -50%);
-    color: #fff;
+.banner__section {
+  height: 80vh;
+  overflow: hidden;
 }
-.whynot__section{
-    position: relative;
-    padding-top: 50px;
-    padding-bottom: 30px;
-    background-color: #F5AD28;
+.banner__section .item {
+  position: relative;
+  height: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(../images/PTHIHN5WMZEFDFLF5YRQCOQVMY.jpg);
+  background-size: cover;
+  background-position: 50%, 50%;
+  height: 80vh;
 }
-.whynot__section .offer{
-    min-height: 350px;
-    position: relative;
-    background-image:  linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(../images/chicken.png);
-    background-size: cover;
-    background-position:50% 50%;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    border:2px solid #fff;
-} 
-.whynot__section .offer .text{
-    position: absolute;
-    top:50%;
-    left: 50%;
-    top: 50%;
-    left:50%;
-    transform: translate(-50%, -50%);
-    color: #fff;
-    width:75%;
+.banner__section .item .main__img {
+  height: 100%;
+}
+.banner__section .item .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+}
+.banner__section .item .text h1 {
+  font-family: "Satisfy", cursive;
+  font-size: 62px;
+}
+.banner__section .item .text .btn__wrap .ordernow__btn {
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 24px;
+  padding: 25px 50px;
+  margin-right: 30px;
+}
+.banner__section .item .text .btn__wrap .viewmenu__btn {
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 24px;
+  padding: 25px 50px;
+}
+.whynot__section {
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  background-color: #f5ad28;
+}
+.whynot__section .offer {
+  min-height: 350px;
+  position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(../images/chicken.png);
+  background-size: cover;
+  background-position: 50% 50%;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 2px solid #fff;
+}
+.whynot__section .offer .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  width: 75%;
+}
+.ourstory__section {
+  background-color: #3d3d3d;
+  padding: 50px 0;
+}
+.ourmenu__section {
+  padding: 50px 0;
+  background-image: url(../images/mutton.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+}
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+.good__section {
+  background-color: #3d3d3d;
+  padding: 50px 0;
+}
+.footer__main {
+  background-color: #f5ad28;
+  padding: 100px 0;
+}
+.footer__bottom__section {
+  background-color: #3d3d3d;
+}
+.footer__bottom__wrap {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+}
+.footer__bottom__wrap .powered {
+  text-align: right;
 }
